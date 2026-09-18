@@ -1,0 +1,31 @@
+Customize These Variables
+[studentName] = Your full name
+[primaryColor] = Your primary website color
+[secondaryColor] = Your secondary website color
+[themeReference] = Optional screenshot uploaded to Replit
+Prompt
+I am building my first website in Replit.
+My name is [studentName].
+Use these primary website colors:
+Primary color: [primaryColor]
+Secondary color: [secondaryColor]
+I have attached the complete project requirements. Read the requirements before making any changes.
+If I uploaded a screenshot as [themeReference], use it as visual inspiration for the website's overall style, layout, spacing, and feel. Do not copy branding, text, images, or other protected content from the reference.
+Your Task
+Build the initial working structure of the website according to the attached requirements.
+Create all required pages, files, navigation, shared styling, client-side JavaScript, server-side JavaScript, and required project structure.
+At this stage:
+Use my real name where required.
+Apply my selected colors and visual theme.
+Create the required navigation, header, footer, and active navigation states.
+Create the basic layout for all required pages.
+Create the contact form fields required by the assignment.
+Create the basic Admin dashboard layout.
+Set up the required server routes and persistent JSON storage architecture.
+Use clearly labeled temporary placeholders where my personal writing, images, videos, social links, goals, choice-page topics, or other content is still missing.
+Do not invent personal facts, biography information, goals, social accounts, images, accomplishments, or interests for me. Instead, use lorem ipsum to fill out template. 
+Do not use random stock images as substitutes for required personal media. Instead, use placeholder images to fill out the template. 
+Do not remove or weaken any requirement from the attached project requirements.
+Important
+I am a high school student in my first web development class and this is my first project. We are learning how to use AI coding agents and documentation to build solutions. 
+Do not assume I have prior knowledge related to CS. If needed, ask questions and explain in clear and concise terms appropriate for me. 
