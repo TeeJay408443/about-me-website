@@ -79,3 +79,56 @@ body,
   border-color: #9362a3;
   box-shadow: 0 2px 0 var(--lilac);
 }
+
+.profile-photo {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  z-index: 3;
+  width: 92px;
+  height: 92px;
+  border: 4px solid var(--cream);
+  outline: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--lilac);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  box-shadow: 5px 5px 0 var(--ink);
+  transform: rotate(8deg);
+}
+
+.profile-photo span {
+  font-family: var(--serif);
+  font-size: 31px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.profile-photo small {
+  position: absolute;
+  top: 104%;
+  right: -10px;
+  width: 110px;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .04em;
+  text-align: right;
+  text-transform: uppercase;
+  transform: rotate(-8deg);
+}
+
+@media (max-width: 760px) {
+  .profile-photo {
+    top: 7%;
+    right: 3%;
+    width: 72px;
+    height: 72px;
+    border-width: 3px;
+  }
+
+  .profile-photo span {
+    font-size: 24px;
+  }
+}
