@@ -1,0 +1,81 @@
+:root {
+  --paper: #fffebe;
+  --cream: #fffebe;
+  --lilac: #dcbce6;
+}
+
+body,
+.site-header,
+.mobile-menu,
+.intro,
+.about-layout,
+.project-list,
+.contact-layout,
+.admin-page,
+.dashboard {
+  background: var(--paper);
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 82% 45%, var(--lilac) 0 13%, transparent 13.2%),
+    var(--cream);
+}
+
+.page-hero,
+.admin-hero {
+  background:
+    radial-gradient(circle at 90% 0%, var(--lilac) 0 18%, transparent 18.2%),
+    var(--cream);
+}
+
+.preview-section {
+  background: linear-gradient(135deg, var(--lilac) 0 52%, var(--cream) 52% 100%);
+}
+
+.values-section {
+  background: linear-gradient(135deg, var(--cream) 0 74%, var(--lilac) 74% 100%);
+}
+
+.dashboard-placeholder {
+  background: linear-gradient(135deg, var(--lilac) 0 65%, var(--cream) 65% 100%);
+}
+
+.main-nav a:after {
+  background: var(--lilac);
+}
+
+.button:hover {
+  background: var(--lilac);
+  color: var(--ink);
+  box-shadow: 6px 6px 0 var(--cream);
+}
+
+.text-link:hover,
+.arrow-link:hover {
+  border-color: var(--lilac);
+  color: #8b5e9c;
+}
+
+.hero-card {
+  box-shadow: 12px 14px 0 var(--lilac);
+}
+
+.circle-link:hover {
+  background: var(--lilac);
+  box-shadow: 4px 4px 0 var(--cream);
+}
+
+.preview-card:hover {
+  box-shadow: 8px 8px 0 var(--lilac);
+}
+
+.placeholder-portrait {
+  box-shadow: 12px 12px 0 var(--cream);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #9362a3;
+  box-shadow: 0 2px 0 var(--lilac);
+}
