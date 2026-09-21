@@ -1,0 +1,39 @@
+I have attached the project requirements for my About Me Website.
+Review the requirements and my current Replit project.
+Your job right now is not to redesign or rebuild the website.
+Help me determine exactly what additional information, writing, links, decisions, images, videos, and other files I need to provide so you can complete the website correctly.
+Work in These Phases
+Use this exact order:
+Phase 1: Home Page
+Include the biography, profile photo, additional media, social links, email/contact information, and anything else required for the Home page.
+Phase 2: Media Page
+Determine exactly what is needed to satisfy all gallery requirements, including the required number and types of media.
+Phase 3: Future Page
+Determine what information, goals, writing, headings, images, or other media you need from me.
+Phase 4: Choice Page #1
+Help me first choose an appropriate topic if I have not selected one. Then determine the content and files needed.
+Phase 5: Choice Page #2
+Help me choose a different topic if necessary. Then determine the content and files needed.
+Phase 6: Admin Page
+Identify any setup or decisions I need to make for the Admin dashboard, password protection, message management, statistics, and chart.
+For Each Phase
+Organize what I need into these categories:
+INFORMATION I NEED TO ANSWER
+Questions I need to answer or writing I need to provide.
+FILES I NEED TO UPLOAD
+Images, videos, screenshots, or other files you need.
+LINKS I NEED TO PROVIDE
+Social media, external media, email links, or other URLs.
+DECISIONS I NEED TO MAKE
+Choices such as page topic, layout preference, captions, or other decisions that cannot be determined from the requirements.
+ALREADY COMPLETE
+Anything in my existing Replit project that already satisfies the requirement.
+Do not ask for information that is not required or useful for this project.
+Do not invent missing personal information.
+Important Workflow
+First, show me a short roadmap containing all 6 phases so I understand what is coming.
+Then begin with Phase 1: Home Page only.
+Give me a clear checklist of what I need to collect, answer, or upload for Phase 1.
+Stop after Phase 1 and wait for me.
+After I provide the requested materials, we will complete Phase 1 before moving to Phase 2.
+
