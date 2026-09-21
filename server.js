@@ -57,7 +57,10 @@ const server = http.createServer(async (request, response) => {
   }
 
   let filePath = requestUrl.pathname === "/" ? path.join(ROOT, "index.html") : path.join(ROOT, requestUrl.pathname);
-  if (!filePath.startsWith(ROOT) || !fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) filePath = path.join(ROOT, "index.html");
+  if (!filePath.startsWith(ROOT) || !fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
+    response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+    return response.end("Page not found");
+  }
   const extension = path.extname(filePath);
   response.writeHead(200, { "Content-Type": MIME_TYPES[extension] || "application/octet-stream", "Cache-Control": "no-cache" });
   fs.createReadStream(filePath).pipe(response);

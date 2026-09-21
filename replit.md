@@ -13,13 +13,10 @@ The Replit workflow serves the site on port 5000.
 ## Project structure
 
 - `index.html` — home page
-- `about.html` — editable about page
-- `work.html` — placeholder project gallery
 - `media.html` — placeholder media gallery
 - `future.html` — future goals and ideas page
 - `choice-one.html` — first assignment topic page
 - `choice-two.html` — second assignment topic page
-- `contact.html` — contact form
 - `admin.html` — basic message dashboard
 - `styles.css` — shared responsive styling and the cream/lilac theme
 - `script.js` — navigation, reveal animations, form submission, and dashboard loading
