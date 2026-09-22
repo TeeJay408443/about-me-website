@@ -15,8 +15,8 @@ The Replit workflow serves the site on port 5000.
 - `index.html` — home page
 - `media.html` — placeholder media gallery
 - `future.html` — future goals and ideas page
-- `choice-one.html` — first assignment topic page
-- `choice-two.html` — second assignment topic page
+- `choice-one.html` — hobbies page
+- `choice-two.html` — contact page with form
 - `admin.html` — basic message dashboard
 - `styles.css` — shared responsive styling and the cream/lilac theme
 - `script.js` — navigation, reveal animations, form submission, and dashboard loading
