@@ -7,7 +7,7 @@ const PORT = Number(process.env.PORT || 5000);
 const ROOT = __dirname;
 const DATA_DIR = path.join(ROOT, "data");
 const MESSAGES_FILE = path.join(DATA_DIR, "messages.json");
-const MIME_TYPES = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".json": "application/json; charset=utf-8" };
+const MIME_TYPES = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".json": "application/json; charset=utf-8", ".mp4": "video/mp4", ".mov": "video/quicktime", ".svg": "image/svg+xml" };
 
 function readMessages() {
   fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -62,7 +62,40 @@ const server = http.createServer(async (request, response) => {
     return response.end("Page not found");
   }
   const extension = path.extname(filePath);
-  response.writeHead(200, { "Content-Type": MIME_TYPES[extension] || "application/octet-stream", "Cache-Control": "no-cache" });
+  const contentType = MIME_TYPES[extension] || "application/octet-stream";
+  const fileSize = fs.statSync(filePath).size;
+  const isVideo = extension === ".mp4" || extension === ".mov";
+  const range = request.headers.range;
+
+  if (isVideo && range) {
+    const match = /^bytes=(\d*)-(\d*)$/.exec(range);
+    if (!match) {
+      response.writeHead(416, { "Content-Range": `bytes */${fileSize}` });
+      return response.end();
+    }
+    const start = match[1] ? Number(match[1]) : 0;
+    const requestedEnd = match[2] ? Number(match[2]) : fileSize - 1;
+    const end = Math.min(requestedEnd, fileSize - 1);
+    if (start >= fileSize || start > end) {
+      response.writeHead(416, { "Content-Range": `bytes */${fileSize}` });
+      return response.end();
+    }
+    response.writeHead(206, {
+      "Content-Type": contentType,
+      "Content-Length": end - start + 1,
+      "Content-Range": `bytes ${start}-${end}/${fileSize}`,
+      "Accept-Ranges": "bytes",
+      "Cache-Control": "no-cache"
+    });
+    return fs.createReadStream(filePath, { start, end }).pipe(response);
+  }
+
+  response.writeHead(200, {
+    "Content-Type": contentType,
+    "Content-Length": fileSize,
+    ...(isVideo ? { "Accept-Ranges": "bytes" } : {}),
+    "Cache-Control": "no-cache"
+  });
   fs.createReadStream(filePath).pipe(response);
 });
 
