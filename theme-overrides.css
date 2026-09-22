@@ -141,6 +141,21 @@ body,
   font-size: 10px;
 }
 
+.media-video {
+  background: var(--ink);
+}
+
+.media-video::before {
+  display: none;
+}
+
+.media-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .media-purple {
   background: var(--lilac);
 }
