@@ -297,6 +297,25 @@ body,
   line-height: 1;
 }
 
+.home-about-grid {
+  display: block;
+}
+
+.home-about-copy {
+  width: 100%;
+  max-width: none;
+  font-size: clamp(1.45rem, 2.35vw, 2.7rem);
+  line-height: 1.2;
+  letter-spacing: -.045em;
+}
+
+.home-about-grid .intro-side {
+  max-width: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 30px;
+}
+
 .profile-photo small {
   position: absolute;
   bottom: -29px;
