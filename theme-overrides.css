@@ -271,14 +271,19 @@ body,
 }
 
 @media (max-width: 760px) {
-  .media-grid,
   .future-layout,
   .choice-layout {
     display: block;
   }
 
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
   .media-tile {
-    margin-bottom: 45px;
+    margin-bottom: 0;
   }
 
   .media-placeholder {
