@@ -100,10 +100,6 @@ body,
   overflow: visible;
 }
 
-.media-featured {
-  grid-column: span 2;
-}
-
 .media-featured .media-photo {
   aspect-ratio: 3 / 2;
 }
@@ -307,10 +303,6 @@ body,
 
   .media-tile {
     margin-bottom: 0;
-  }
-
-  .media-featured {
-    grid-column: span 2;
   }
 
   .media-placeholder {
