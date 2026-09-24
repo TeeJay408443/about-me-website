@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Admin sign in — Tyler Johnson</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/theme-overrides.css">
+</head>
+<body class="admin-login-page">
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="logo" href="/" aria-label="Tyler Johnson home"><span class="logo-mark">TJ</span><span>Tyler Johnson</span></a>
+      <a class="text-link" href="/">Back to website ↗</a>
+    </header>
+    <main>
+      <section class="admin-login-wrap page-pad">
+        <div class="admin-login-card">
+          <p class="eyebrow"><span></span> Private area</p>
+          <h1>Admin<br><em>sign in.</em></h1>
+          <p class="page-lede">Enter the admin password to continue.</p>
+          <form id="admin-login-form" class="admin-login-form">
+            <label for="admin-password">Password</label>
+            <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+            <button class="button" type="submit">Sign in <span>↗</span></button>
+            <p class="admin-login-status" id="admin-login-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><span>© 2026 Tyler Johnson</span><span>Admin sign in</span><a href="/">Back to website ↑</a></footer>
+  </div>
+  <script src="/admin-login.js"></script>
+</body>
+</html>
