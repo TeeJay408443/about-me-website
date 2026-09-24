@@ -1,10 +1,89 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Choice Page 1 for Tyler Johnson."><title>Choice 1 — Tyler Johnson</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/theme-overrides.css"></head>
-<body><div class="site-shell">
-  <header class="site-header"><a class="logo" href="/" aria-label="Tyler Johnson home"><span class="logo-mark">TJ</span><span>Tyler Johnson</span></a><nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/media.html">Media</a><a href="/future.html">Future</a><a class="active" href="/choice-one.html">About</a><a href="/choice-two.html">Contact</a><a href="/admin.html">Admin</a></nav><a class="button button-small" href="/media.html">Explore media <span>↗</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button></header>
-  <div class="mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/media.html">Media</a><a href="/future.html">Future</a><a href="/choice-one.html">About</a><a href="/choice-two.html">Contact</a><a href="/admin.html">Admin</a></div>
-  <main><section class="page-hero page-pad reveal"><p class="eyebrow"><span></span> 01 / About me</p><h1>A little<br><em>about me.</em></h1><p class="page-lede">This page shares Tyler’s current story and leaves room for more approved details later.</p></section>
-    <section class="choice-layout page-pad"><div class="choice-card reveal"><span class="choice-number">01</span><h2>Hi, I’m<br>Tyler.</h2><p>I’m a high school freshman, a dedicated member of the football team, and a passionate basketball player. When I’m not on the field, I love playing video games with my friends.</p></div><div class="choice-notes reveal"><p class="section-label">About me</p><ul><li>High school freshman</li><li>Football team member</li><li>Passionate basketball player</li><li>Enjoys video games with friends</li></ul></div></section>
-  </main><footer class="site-footer"><span>© 2026 Tyler Johnson</span><span>Built while learning on Replit.</span><a href="#top">Back to top ↑</a></footer>
-</div><script src="/script.js"></script></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects by Tyler Johnson, including an interactive bubble game.">
+  <title>Projects — Tyler Johnson</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/theme-overrides.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="logo" href="/" aria-label="Tyler Johnson home"><span class="logo-mark">TJ</span><span>Tyler Johnson</span></a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/media.html">Media</a><a href="/future.html">Future</a><a class="active" href="/choice-one.html">Projects</a><a href="/choice-two.html">Contact</a><a href="/admin.html">Admin</a></nav>
+      <a class="button button-small" href="#bubble-game">Play now <span>↓</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </header>
+    <div class="mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/media.html">Media</a><a href="/future.html">Future</a><a href="/choice-one.html">Projects</a><a href="/choice-two.html">Contact</a><a href="/admin.html">Admin</a></div>
+
+    <main>
+      <section class="page-hero compact page-pad reveal">
+        <p class="eyebrow"><span></span> 04 / Projects</p>
+        <h1>Bubble<br><em>collector.</em></h1>
+        <p class="page-lede">Click bubbles before they float away. Spend what you collect on upgrades and build a better bubble machine.</p>
+      </section>
+
+      <section class="bubble-project page-pad" id="bubble-game">
+        <div class="section-heading reveal">
+          <div class="section-label">Interactive project 01</div>
+          <p>Your progress saves in this browser.</p>
+        </div>
+
+        <div class="bubble-game-shell reveal">
+          <div class="bubble-game-header">
+            <div class="bubble-stat bubble-stat-primary"><span>Bubbles</span><strong id="bubble-balance">0</strong></div>
+            <div class="bubble-stat"><span>Bubbles clicked</span><strong id="bubble-clicked">0</strong></div>
+            <div class="bubble-stat"><span>Per click</span><strong id="bubble-power">1</strong></div>
+            <div class="bubble-stat"><span>Auto / sec</span><strong id="bubble-auto">0</strong></div>
+            <div class="bubble-controls">
+              <button class="game-control" id="bubble-pause" type="button" aria-pressed="false">Pause</button>
+              <button class="game-control game-control-reset" id="bubble-reset" type="button">Reset</button>
+            </div>
+          </div>
+
+          <div class="bubble-game-layout">
+            <div class="bubble-stage" id="bubble-stage" aria-label="Bubble game area. Click rising bubbles before they leave the screen.">
+              <div class="bubble-stage-copy" aria-hidden="true"><strong>Pop!</strong><span>Click the rising bubbles</span></div>
+            </div>
+
+            <aside class="upgrade-panel" aria-label="Bubble upgrades">
+              <div>
+                <p class="section-label">Upgrade shop</p>
+                <h2>Collect more.</h2>
+                <p class="upgrade-intro">Spend bubbles to improve your collector. Upgrades and scores are saved automatically.</p>
+              </div>
+
+              <button class="upgrade-card" type="button" data-upgrade="power">
+                <span class="upgrade-icon">×2</span>
+                <span class="upgrade-copy"><strong>Pop power</strong><small>Earn one more bubble per click.</small></span>
+                <span class="upgrade-meta"><small>Level <b data-level="power">0</b></small><strong><b data-cost="power">10</b> bubbles</strong></span>
+              </button>
+
+              <button class="upgrade-card" type="button" data-upgrade="speed">
+                <span class="upgrade-icon">↑</span>
+                <span class="upgrade-copy"><strong>Bubble rush</strong><small>Make new bubbles appear faster.</small></span>
+                <span class="upgrade-meta"><small>Level <b data-level="speed">0</b></small><strong><b data-cost="speed">15</b> bubbles</strong></span>
+              </button>
+
+              <button class="upgrade-card" type="button" data-upgrade="auto">
+                <span class="upgrade-icon">+</span>
+                <span class="upgrade-copy"><strong>Auto collector</strong><small>Collect bubbles every second.</small></span>
+                <span class="upgrade-meta"><small>Level <b data-level="auto">0</b></small><strong><b data-cost="auto">25</b> bubbles</strong></span>
+              </button>
+
+              <p class="game-status" id="bubble-status" role="status" aria-live="polite">Click a bubble to begin.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© 2026 Tyler Johnson</span><span>Built while learning on Replit.</span><a href="#top">Back to top ↑</a></footer>
+  </div>
+  <script src="/script.js"></script>
+  <script src="/bubble-game.js"></script>
+</body>
+</html>

@@ -15,11 +15,12 @@ The Replit workflow serves the site on port 5000.
 - `index.html` — home page
 - `media.html` — placeholder media gallery
 - `future.html` — future goals and ideas page
-- `choice-one.html` — About Me page
+- `choice-one.html` — Projects page with the Bubble Collector game
 - `choice-two.html` — contact page with form
 - `admin.html` — basic message dashboard
 - `styles.css` — shared responsive styling and the cream/lilac theme
 - `script.js` — navigation, reveal animations, form submission, and dashboard loading
+- `bubble-game.js` — Bubble Collector gameplay, upgrades, and saved progress
 - `server.js` — static file server plus `/api/messages` GET/POST routes
 - `data/messages.json` — persistent local message storage
 
