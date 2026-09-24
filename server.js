@@ -114,7 +114,7 @@ const server = http.createServer(async (request, response) => {
     } catch {
       return sendJson(response, 400, { error: "Invalid sign-in request." });
     }
-    if (!passwordMatches(input.password)) {
+    if (!input || !passwordMatches(input.password)) {
       attempts.count += 1;
       return sendJson(response, 401, { error: "That password did not match. Try again." });
     }
@@ -167,6 +167,11 @@ const server = http.createServer(async (request, response) => {
     return response.end();
   }
 
+  if (requestUrl.pathname === "/admin-login.html" && isAdminAuthenticated(request)) {
+    response.writeHead(302, { Location: "/admin.html", "Cache-Control": "no-store" });
+    return response.end();
+  }
+
   if (requestUrl.pathname === "/data" || requestUrl.pathname.startsWith("/data/")) {
     response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
     return response.end("Page not found");
@@ -210,7 +215,7 @@ const server = http.createServer(async (request, response) => {
     "Content-Type": contentType,
     "Content-Length": fileSize,
     ...(isVideo ? { "Accept-Ranges": "bytes" } : {}),
-    "Cache-Control": "no-cache"
+    "Cache-Control": requestUrl.pathname === "/admin.html" ? "no-store" : "no-cache"
   });
   fs.createReadStream(filePath).pipe(response);
 });
